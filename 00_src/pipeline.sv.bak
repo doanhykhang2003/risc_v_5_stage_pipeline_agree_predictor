@@ -1,0 +1,37 @@
+module pipleline(
+  // Input Declaration
+  input  logic         i_clk     , 
+  input  logic         i_rst_n   ,
+  // Output Declaration
+  output logic [31:0]  o_pc_four_d ,
+  output logic [31:0]  o_pc_d      ,
+  output logic [31:0]  o_instr_d   
+);
+
+  // Declaration of Interim logics
+  logic [31:0] instr_d  ;
+  logic [31:0] pc_d     ;
+  logic [31:0] pc_four_d;
+
+  //==================Module Declaration==================//
+  fetch_stage FETCH_STAGE(
+    // input of fetch stage
+	  .i_clk        (i_clk     ), 
+    .i_rst_n      (i_rst_n   ),
+	  .i_pc_sel_e   (1'b0      ), 
+    .i_stall_d    (1'b0      ), 
+    .i_stall_f    (1'b0      ), 
+    .i_flush_d    (1'b0      ),
+    .i_alu_data_e (32'b0     ),
+
+    // output of fetch stage
+    .o_instr_d    (instr_d  ),
+    .o_pc_d       (pc_d     ), 
+    .o_pc_four_d  (pc_four_d)  
+  ); 
+
+  assign o_instr_d   = instr_d  ;
+  assign o_pc_d      = pc_d     ;
+  assign o_pc_four_d = pc_four_d;
+
+endmodule

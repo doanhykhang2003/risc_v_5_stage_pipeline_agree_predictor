@@ -1,0 +1,29 @@
+module data_memory(
+  input               i_clk, i_rst, i_wren;
+  input        [31:0] i_addr, i_st_data;
+  output logic [31:0] o_dmem_load_data;
+);
+
+  logic [31:0]   mem [2047:0]  ;                // Address range: 0x0800 - 0x0FFF
+  logic [1023:0] addr_reg      ;                // Address storage
+
+  // Write Operation
+  always_ff @(posedge i_clk) begin : write_operation
+    addr_reg <= i_addr;
+    if (!i_rst) begin
+      mem[i_addr] <= 32'b0    ;
+    end else if(i_wren) begin
+      mem[i_addr] <= i_st_data;
+    end 
+  end
+
+  // Read Operation
+  always_comb begin : read_operation
+    if(!i_wren) begin
+      dmem_load_data = mem[addr_reg];
+    end else begin
+      dmem_load_data = 32'b0        ;
+    end
+  end 
+
+endmodule

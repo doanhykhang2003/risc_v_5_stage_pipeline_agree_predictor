@@ -1,0 +1,144 @@
+`include "timescale.svh"
+module lsu(
+  // Input Declaration
+  input  logic 				i_clk     ,
+  input  logic 				i_rst     ,
+  input  logic    		i_lsu_wren,
+  input  logic [2:0]  i_funct3  ,
+  input  logic [16:0] i_io_sw   ,              // Input from switches 
+  input  logic [31:0] i_lsu_addr,              // Memory i_lsu_address
+  input  logic [31:0] i_st_data ,              // Write data
+  // Output Declaration
+	output logic [6:0]  o_io_hex0 ,              // HEX0 display output
+  output logic [6:0]  o_io_hex1 ,              // HEX1 display output
+  output logic [6:0]  o_io_hex2 ,              // HEX2 display output
+  output logic [6:0]  o_io_hex3 ,              // HEX3 display output
+  output logic [6:0]  o_io_hex4 ,              // HEX4 display output
+  output logic [6:0]  o_io_hex5 ,              // HEX5 display output
+  output logic [6:0]  o_io_hex6 ,              // HEX6 display output
+  output logic [6:0]  o_io_hex7 ,              // HEX7 display output
+  output logic [8:0]  o_io_ledg ,              // Green LEDs output
+  output logic [12:0] o_io_lcd  ,              // LCD display output
+  output logic [17:0] o_io_ledr ,              // Red LEDs output
+  output logic [31:0] o_ld_data                // Read data
+);
+
+  // Data memory array
+  logic [31:0] mem [5639:0];  // 1KB memory (i_lsu_addresses 0x0800 - 0x01E07)
+
+  // i_lsu_address decoding for memory-mapped peripherals
+  logic is_data_memory  ;  
+  logic is_input_periph ;  
+  logic is_output_periph; 
+
+  always_comb begin : data_mapping
+    is_data_memory   = (i_lsu_addr >= 32'h00000800 && i_lsu_addr <= 32'h00000FFF);    // Data memory range
+    is_input_periph  = (i_lsu_addr == 32'h00000900)                              ;    // SW input peripheral i_lsu_address
+    is_output_periph = (i_lsu_addr >= 32'h00001C00 && i_lsu_addr <= 32'h00001C0F);    // Output peripherals range
+  end : data_mapping
+
+  // Output Peripheral Fields
+  logic [31:0] output_data;
+  always_comb begin : output_peri_data
+    output_data = (is_output_periph) ? i_st_data : 32'b0;
+  end : output_peri_data
+
+  // Write operation (Store to memory or peripherals)
+  always_ff @(posedge i_clk) begin : store_instr_sel
+    if (i_lsu_wren) begin
+      if (is_data_memory) begin
+        case (i_funct3)
+          3'b000 : begin // Store byte
+            mem[i_lsu_addr]     <= {24'b0, i_st_data[7:0]};   
+          end 
+          3'b001 : begin // Store halfword
+            mem[i_lsu_addr]     <= i_st_data[7:0]         ;   
+            mem[i_lsu_addr + 1] <= i_st_data[15:8]        ;  
+            mem[i_lsu_addr + 2] <= 8'b0                   ;  
+            mem[i_lsu_addr + 3] <= 8'b0                   ;  
+          end 
+          3'b010 : begin // Store word
+            mem[i_lsu_addr]     <= i_st_data              ;   
+          end 
+          default: begin // Default: no operation
+            mem[i_lsu_addr]     <= mem[i_lsu_addr]        ;   
+          end 
+        endcase
+      end 
+    end
+  end : store_instr_sel
+
+  // Load operation (Read from memory or peripherals)
+  always_ff @(posedge i_clk) begin : load_instr_sel
+    o_ld_data <= 32'b0;  // Default value
+    if (!i_lsu_wren) begin
+      if (is_data_memory) begin
+        case (i_funct3)
+          3'b000:  o_ld_data <= {{24{mem[i_lsu_addr][7]}}, mem[i_lsu_addr][7:0]}                          ; // Load byte (sign-extended)
+          3'b001:  o_ld_data <= {{16{mem[i_lsu_addr][7]}}, mem[i_lsu_addr + 1][7:0], mem[i_lsu_addr][7:0]}; // Load halfword (sign-extended)
+          3'b010:  o_ld_data <= mem[i_lsu_addr]                                                           ; // Load word
+          3'b100:  o_ld_data <= {24'b0, mem[i_lsu_addr][7:0]}                                             ; // Load byte unsigned
+          3'b101:  o_ld_data <= {16'b0, mem[i_lsu_addr + 1][15:8], mem[i_lsu_addr][7:0]}                  ; // Load halfword unsigned
+          default: o_ld_data <= 32'b0                                                                     ; // Default case: no operation
+        endcase
+      end else if (is_input_periph) begin
+        o_ld_data <= i_io_sw; // Read from switches (SW input)
+      end
+    end
+  end : load_instr_sel
+
+  // HEX display outputs (bcd7segment for each HEX digit)
+  // HEX0
+  bcd7segment HEX0(
+    .in (output_data[3:0]), 
+    .out(o_io_hex0       )
+  );  
+
+  // HEX1
+  bcd7segment HEX1(
+    .in (output_data[7:4]), 
+    .out(o_io_hex1       )
+  );  
+
+  // HEX2
+  bcd7segment HEX2(
+    .in (output_data[11:8]), 
+    .out(o_io_hex2        )
+  );  
+
+  // HEX3
+  bcd7segment HEX3(
+    .in (output_data[15:12]),
+    .out(o_io_hex3         )
+  );  
+
+  // HEX4
+  bcd7segment HEX4(
+    .in (output_data[19:16]), 
+    .out(o_io_hex4         )
+  );  
+
+  // HEX5
+  bcd7segment HEX5(
+    .in (output_data[23:20]), 
+    .out(o_io_hex5         )
+  );  
+
+  // HEX6
+  bcd7segment HEX6(
+    .in (output_data[27:24]), 
+    .out(o_io_hex6         )
+  );  
+
+  // HEX7
+  bcd7segment HEX7(
+    .in (output_data[31:28]), 
+    .out(o_io_hex7         )
+  );  
+
+  // Additional assignments for outputs
+  assign o_io_ledg = (is_output_periph && (i_lsu_addr == 32'h00000890)) ? i_st_data[8:0]  : 9'b0 ;  
+  assign o_io_lcd  = (is_output_periph && (i_lsu_addr == 32'h000008A0)) ? i_st_data[12:0] : 13'b0;
+  assign o_io_ledr = (is_output_periph && (i_lsu_addr == 32'h00000880)) ? i_st_data[17:0] : 18'b0;  
+
+endmodule : lsu

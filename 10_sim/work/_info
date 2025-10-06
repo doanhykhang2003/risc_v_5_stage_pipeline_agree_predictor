@@ -1,0 +1,723 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11f MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dD:/veron/day_10/risc_v_pipeline_gshare/10_sim
+T_opt
+!s110 1745400453
+Vd[:z?K[iBeJmOi42ncJSL0
+04 27 4 work pipeline_agree_predictor_tb fast 0
+=1-2c3b705d6ee1-6808b285-169-4728
+R0
+!s12b OEM100
+!s124 OEM10U37 
+o-quiet -auto_acc_if_foreign -work work
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2023.3;77
+R1
+vadder
+Z3 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z4 !s110 1748830891
+!i10b 1
+!s100 >HCKVm=mDd;lVJ3YU_oBD2
+IddE5Ale>Jg7HL3KT9RHzY1
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+!s105 adder_sv_unit
+S1
+Z6 dD:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/10_sim
+Z7 w1732193898
+8D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/adder.sv
+FD:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/adder.sv
+L0 1
+Z8 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z9 !s108 1748830891.000000
+!s107 D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/adder.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/adder.sv|
+!i113 1
+Z10 o-work work -sv
+R2
+vagree_predictor
+R3
+R4
+!i10b 1
+!s100 KeKQgAgC8`Nd`ZS@`:G>g0
+IHIcYPde`:nTVoITL8JRKB3
+R5
+!s105 agree_predictor_sv_unit
+S1
+R6
+w1745392790
+8D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/agree_predictor.sv
+FD:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/agree_predictor.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+!s107 D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/agree_predictor.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/agree_predictor.sv|
+!i113 1
+R10
+R2
+valu
+R3
+R4
+!i10b 1
+!s100 fb2^MA_2Z@CBUZ<oTC><k1
+IkMN<oVc1Y[9dQVzY=Z[hA2
+R5
+!s105 alu_sv_unit
+S1
+R6
+w1741147389
+8D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/alu.sv
+FD:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/alu.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+!s107 D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/alu.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/alu.sv|
+!i113 1
+R10
+R2
+vbcd7segment
+R3
+R4
+!i10b 1
+!s100 :LkVU10jVHOAoTJ[?QGBJ1
+IZM0Z[?QH^n>k]h4T42?MR0
+R5
+!s105 bcd7segment_sv_unit
+S1
+R6
+w1748574901
+8D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/bcd7segment.sv
+FD:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/bcd7segment.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+!s107 D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/bcd7segment.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/bcd7segment.sv|
+!i113 1
+R10
+R2
+vbias_table
+R3
+R4
+!i10b 1
+!s100 ]X1U=dM5lHVhJ5alQ8AJZ3
+I9DFg1=dWeX:FE8CjB@=073
+R5
+!s105 bias_table_sv_unit
+S1
+R6
+w1745392796
+8D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/bias_table.sv
+FD:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/bias_table.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+!s107 D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/bias_table.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/bias_table.sv|
+!i113 1
+R10
+R2
+vbr_ctr_unit
+R3
+R4
+!i10b 1
+!s100 6^_PB`c3_=4f50^_dR8[I1
+IHOVK6d=E0TmAOCf9Eo6;Y2
+R5
+!s105 br_ctrl_unit_sv_unit
+S1
+R6
+w1741755247
+8D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/br_ctrl_unit.sv
+FD:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/br_ctrl_unit.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+!s107 D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/br_ctrl_unit.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/br_ctrl_unit.sv|
+!i113 1
+R10
+R2
+vbrc
+R3
+R4
+!i10b 1
+!s100 4RdUT=YCKF6I`fgFl[k2l1
+IWKF<98LJOcOH?JjF43^[l2
+R5
+!s105 brc_sv_unit
+S1
+R6
+w1740824014
+8D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/brc.sv
+FD:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/brc.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+!s107 D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/brc.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/brc.sv|
+!i113 1
+R10
+R2
+vbtb
+R3
+R4
+!i10b 1
+!s100 ^Hz=:M9enXfHLA]^::>cS0
+Ia7IWFh?4S2TdmdcNE:DXP2
+R5
+!s105 btb_sv_unit
+S1
+R6
+w1745380502
+8D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/btb.sv
+FD:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/btb.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+!s107 D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/btb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/btb.sv|
+!i113 1
+R10
+R2
+vclock_divider
+R3
+R4
+!i10b 1
+!s100 64WJ`_K`iV1<^SFP42Ulf2
+I?47B1@FJHGlGY3PCYJ9:;0
+R5
+!s105 clock_divider_sv_unit
+S1
+R6
+w1742183231
+8D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/clock_divider.sv
+FD:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/clock_divider.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+!s107 D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/clock_divider.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/clock_divider.sv|
+!i113 1
+R10
+R2
+vctrl_unit
+R3
+R4
+!i10b 1
+!s100 <P1Nb@I[_WH8AcRFNVk]i3
+IgCL>mA;zaEQg]<2A3kfP82
+R5
+!s105 ctrl_unit_sv_unit
+S1
+R6
+w1745218587
+8D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/ctrl_unit.sv
+FD:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/ctrl_unit.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+!s107 D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/ctrl_unit.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/ctrl_unit.sv|
+!i113 1
+R10
+R2
+vdata_memory
+R3
+R4
+!i10b 1
+!s100 L14=3O?M_A14aU_abW_Ke1
+IoQGZEWMD4hHnPD?bLSL;D0
+R5
+!s105 data_memory_sv_unit
+S1
+R6
+w1745642406
+8D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/data_memory.sv
+FD:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/data_memory.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+!s107 D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/data_memory.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/data_memory.sv|
+!i113 1
+R10
+R2
+vdecode_stage
+R3
+R4
+!i10b 1
+!s100 ZD9Y@mSS22l]oa[oh`K?X1
+I87YOffJ=e7IUnoY]6Xaab0
+R5
+!s105 decode_stage_sv_unit
+S1
+R6
+w1745564569
+8D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/decode_stage.sv
+FD:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/decode_stage.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+!s107 D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/decode_stage.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/decode_stage.sv|
+!i113 1
+R10
+R2
+vexecute_stage
+R3
+R4
+!i10b 1
+!s100 K@Q0O>9Q36a;BHa:E;fMg3
+I<c3N63hYd^zG>IedWg[303
+R5
+!s105 execute_stage_sv_unit
+S1
+R6
+w1745230977
+8D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/execute_stage.sv
+FD:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/execute_stage.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+!s107 D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/execute_stage.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/execute_stage.sv|
+!i113 1
+R10
+R2
+vfetch_stage
+R3
+R4
+!i10b 1
+!s100 iMSG6F]z77nHgSTX8;bYz0
+If;Ph@fVBZX@@bb6:m^i]Q3
+R5
+!s105 fetch_stage_sv_unit
+S1
+R6
+w1745389260
+8D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/fetch_stage.sv
+FD:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/fetch_stage.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+!s107 D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/fetch_stage.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/fetch_stage.sv|
+!i113 1
+R10
+R2
+vghr
+R3
+R4
+!i10b 1
+!s100 4KMOGCF:GW8ne2al05JNC1
+IFm91TE:Ga7Bf]Bz?F@]P]1
+R5
+!s105 ghr_sv_unit
+S1
+R6
+w1745380159
+8D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/ghr.sv
+FD:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/ghr.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+!s107 D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/ghr.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/ghr.sv|
+!i113 1
+R10
+R2
+vhazard_unit
+R3
+R4
+!i10b 1
+!s100 jVeCGJ7Dm5^f8NOH9_;Y=0
+IUl3G^^hjQ^jaZ_E@2hnVj2
+R5
+!s105 hazard_unit_sv_unit
+S1
+R6
+w1745596547
+8D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/hazard_unit.sv
+FD:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/hazard_unit.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+!s107 D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/hazard_unit.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/hazard_unit.sv|
+!i113 1
+R10
+R2
+vhex_shift_data
+R3
+!s110 1748574809
+!i10b 1
+!s100 HdjXI`MKMFklOB=]d5U1>1
+ID5BC8fiNzd]hlaakV_HAf3
+R5
+!s105 hex_shift_data_sv_unit
+S1
+R6
+w1741061142
+8D:/veron/day_10/risc_v_pipeline_agree/00_src/hex_shift_data.sv
+FD:/veron/day_10/risc_v_pipeline_agree/00_src/hex_shift_data.sv
+L0 1
+R8
+r1
+!s85 0
+31
+!s108 1748574809.000000
+!s107 D:/veron/day_10/risc_v_pipeline_agree/00_src/hex_shift_data.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/veron/day_10/risc_v_pipeline_agree/00_src/hex_shift_data.sv|
+!i113 1
+R10
+R2
+vimm_gen
+R3
+R4
+!i10b 1
+!s100 PX1a9h@CjP;VO9:gQ1HIU0
+IEmVZE8aL3jgi]I6L_khiE3
+R5
+!s105 imm_gen_sv_unit
+S1
+R6
+w1741935285
+8D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/imm_gen.sv
+FD:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/imm_gen.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+!s107 D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/imm_gen.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/imm_gen.sv|
+!i113 1
+R10
+R2
+vinstr_mem
+R3
+R4
+!i10b 1
+!s100 lG1IjVG=fTMTOTY02XHDc3
+I64XRgdRHf8mFNT_zTJl;Z0
+R5
+!s105 instr_mem_sv_unit
+S1
+R6
+w1748574752
+8D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/instr_mem.sv
+FD:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/instr_mem.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+!s107 D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/instr_mem.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/instr_mem.sv|
+!i113 1
+R10
+R2
+vlsu
+R3
+Z11 !s110 1748830892
+!i10b 1
+!s100 8i==SBcNXg@5ZhNczJLVB3
+I@W5@WNI8EDY=^1Jlg:kg82
+R5
+!s105 lsu_sv_unit
+S1
+R6
+w1748574734
+8D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/lsu.sv
+FD:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/lsu.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+!s107 D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/lsu.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/lsu.sv|
+!i113 1
+R10
+R2
+vmemory_stage
+R3
+R11
+!i10b 1
+!s100 S0Q2dK?eiI3P^gJWoG@9n3
+IS0Wc:h`E9mUNCjc7KO5]i0
+R5
+!s105 memory_stage_sv_unit
+S1
+R6
+w1748573296
+8D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/memory_stage.sv
+FD:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/memory_stage.sv
+L0 1
+R8
+r1
+!s85 0
+31
+Z12 !s108 1748830892.000000
+!s107 D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/memory_stage.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/memory_stage.sv|
+!i113 1
+R10
+R2
+vmux2_1
+R3
+R11
+!i10b 1
+!s100 NJLDMUY5Ag0`aB^RnR[X@0
+I7mzGbe3h_i^l1BkXg;=X[2
+R5
+!s105 mux2_1_sv_unit
+S1
+R6
+w1741579017
+8D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/mux2_1.sv
+FD:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/mux2_1.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R12
+!s107 D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/mux2_1.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/mux2_1.sv|
+!i113 1
+R10
+R2
+vmux3_1
+R3
+R11
+!i10b 1
+!s100 j<nkR<fJIR3`DWa`QTDS_0
+IcU4lYFkU69_Z0JZW6iK<a3
+R5
+!s105 mux3_1_sv_unit
+S1
+R6
+R7
+8D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/mux3_1.sv
+FD:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/mux3_1.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R12
+!s107 D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/mux3_1.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/mux3_1.sv|
+!i113 1
+R10
+R2
+vPC
+R3
+R11
+!i10b 1
+!s100 PVG7MeX3W6;kn[SI8ALWA3
+IXHfNXOka?a8;RgMd`HJN80
+R5
+!s105 PC_sv_unit
+S1
+R6
+w1741590583
+8D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/PC.sv
+FD:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/PC.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R12
+!s107 D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/PC.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/PC.sv|
+!i113 1
+R10
+R2
+n@p@c
+vpht_agree
+R3
+R11
+!i10b 1
+!s100 ?Q8ZV:iX_]5K_l_ZaEMkz2
+I4;k^VD]f_][QPKkYmfnfb3
+R5
+!s105 pht_agree_sv_unit
+S1
+R6
+w1745466162
+8D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/pht_agree.sv
+FD:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/pht_agree.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R12
+!s107 D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/pht_agree.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/pht_agree.sv|
+!i113 1
+R10
+R2
+vpipeline_agree_predictor
+R3
+R11
+!i10b 1
+!s100 mXYebYlATLnGkOQYY=48Q0
+IcnLjnLJ<AMA=k6EVFjFz>3
+R5
+!s105 pipeline_agree_predictor_sv_unit
+S1
+R6
+w1748575439
+8D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/pipeline_agree_predictor.sv
+FD:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/pipeline_agree_predictor.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R12
+!s107 D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/pipeline_agree_predictor.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/pipeline_agree_predictor.sv|
+!i113 1
+R10
+R2
+vpipeline_agree_predictor_tb
+R3
+R11
+!i10b 1
+!s100 5iGKLDmlUFFb[P_:3H=kz1
+I<mR>l=aI0GAZZc7YgH>ZM3
+R5
+!s105 pipeline_agree_predictor_tb_sv_unit
+S1
+R6
+w1748575114
+8D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/01_bench/pipeline_agree_predictor_tb.sv
+FD:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/01_bench/pipeline_agree_predictor_tb.sv
+L0 3
+R8
+r1
+!s85 0
+31
+R12
+!s107 D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/01_bench/pipeline_agree_predictor_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/01_bench/pipeline_agree_predictor_tb.sv|
+!i113 1
+R10
+R2
+vregfile
+R3
+R11
+!i10b 1
+!s100 76`@JOFij`<5::]28:iNj1
+IQMjgTL0iUek7:XT2XYmUn2
+R5
+!s105 regfile_sv_unit
+S1
+R6
+w1741594280
+8D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/regfile.sv
+FD:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/regfile.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R12
+!s107 D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/regfile.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/regfile.sv|
+!i113 1
+R10
+R2
+vwriteback_stage
+R3
+R4
+!i10b 1
+!s100 6Z2EUoT5CCjLNeP_>mIbQ0
+I<DLLQF03<ec6=S]WfcS;H3
+R5
+!s105 writeback_stage_sv_unit
+S1
+R6
+w1741589544
+8D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/writeback_stage.sv
+FD:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/writeback_stage.sv
+L0 1
+R8
+r1
+!s85 0
+31
+!s108 1748830890.000000
+!s107 D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/writeback_stage.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/BK_University_Courses/Senior_Design_Project/risc_v_pipeline_agree/00_src/writeback_stage.sv|
+!i113 1
+R10
+R2

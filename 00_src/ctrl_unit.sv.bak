@@ -1,0 +1,53 @@
+`include "timescale.svh"
+module ctrl_unit(
+  // Input Declarations
+  input  logic [2:0] i_funct3  ,
+  input  logic [6:0] i_op      ,
+  input  logic [6:0] i_funct7  ,
+  // Output Declarations
+  output logic       o_insn_vld,
+  output logic       o_rd_wren , 
+  output logic       o_op_b_sel, 
+  output logic       o_mem_wren, 
+  output logic       o_branch  , 
+  output logic       o_jump    , 
+  output logic       o_op_a_sel,
+  output logic [1:0] o_wb_sel  ,
+  output logic [2:0] o_imm_src ,
+  output logic [4:0] o_alu_op  ,
+  // Sram I/Os Declarations
+  input  logic       i_sram_ACK,
+  output logic       o_stop_pc       
+);
+
+  logic [1:0] alu_op_data;
+
+  main_decoder main_decoder(
+    // Input of main_decoder
+    .i_op         (i_op       ),
+    // Output of main_decoder
+    .o_insn_vld   (o_insn_vld ),
+    .o_rd_wren    (o_rd_wren  ),
+    .o_imm_src    (o_imm_src  ),
+    .o_mem_wren   (o_mem_wren ),
+    .o_wb_sel     (o_wb_sel   ),
+    .o_branch     (o_branch   ),
+    .o_jump       (o_jump     ),
+    .o_op_a_sel   (o_op_a_sel ),
+    .o_op_b_sel   (o_op_b_sel ),
+    .o_alu_op_data(alu_op_data)
+  );
+
+  alu_decoder alu_decoder(
+    // Input of alu_decoder
+    .i_alu_op_data(alu_op_data),
+    .i_funct3     (i_funct3   ),
+    .i_funct7     (i_funct7   ),
+    .i_op         (i_op       ),
+    // Output of alu_decoder
+    .o_alu_op     (o_alu_op   )
+  );
+
+  assign o_stop_pc = (i_op == 7'b0000011 | i_op = 7'b0100011) & i_sram_ACK;
+
+endmodule : ctrl_unit

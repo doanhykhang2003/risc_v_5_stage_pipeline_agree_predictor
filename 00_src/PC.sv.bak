@@ -1,0 +1,23 @@
+`include "timescale.svh"
+module PC (
+  input  logic        i_clk     , 
+  input  logic        i_rst_n   ,
+  input  logic        i_stop_pc ,
+  input  logic [31:0] i_pc_next ,
+  output logic [31:0] o_pc
+);
+  logic [31:0] pc_in;
+  always_comb begin  : stop_pc_mux
+    if(stop_pc) begin
+      pc_in = o_pc     ;
+    end else begin
+      pc_in = i_pc_next;
+    end
+  end
+
+  always_ff @(posedge i_clk or negedge i_rst_n) begin : pc_ff
+    if     (!i_rst_n)    o_pc <= 32'b0    ;
+    else                 o_pc <= pc_in    ;
+  end : pc_ff
+
+endmodule : PC
