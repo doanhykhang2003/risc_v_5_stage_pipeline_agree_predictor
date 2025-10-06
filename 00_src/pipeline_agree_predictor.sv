@@ -113,9 +113,9 @@ module pipeline_agree_predictor(
   //==================Module Declaration==================//
   fetch_stage FETCH_STAGE(
     // input of fetch stage
-	  .i_clk           (i_clk         ), 
+	.i_clk           (i_clk         ), 
     .i_rst_n         (i_rst_n       ),
-	  .i_pc_sel_e      (pc_sel_final  ), 
+	.i_pc_sel_e      (pc_sel_final  ), 
     .i_btb_valid_e   (btb_valid_e   ),
     .i_is_jump_e     (is_jump_e     ),
     .i_taken_flush   (taken_flush   ),
@@ -153,7 +153,7 @@ module pipeline_agree_predictor(
     .o_op_a_sel_e    (op_a_sel_e    ),
     .o_op_b_sel_e    (op_b_sel_e    ), 
     .o_mem_wren_e    (mem_wren_e    ), 
-	  .o_pc_sel_e		   (pc_sel_e      ),
+	.o_pc_sel_e		 (pc_sel_e      ),
     .o_taken_e       (taken_e       ),
     .o_btb_valid_e   (btb_valid_e   ),
     .o_is_jump_e     (is_jump_e     ),
@@ -170,7 +170,7 @@ module pipeline_agree_predictor(
     .o_predicted_pc_e(predicted_pc_e),
     .o_pc_four_e     (pc_four_e     ),
     // Registers content check
-		.x1              (x1            ),
+    .x1              (x1            ),
     .x2              (x2          	),
     .x3              (x3          	),
     .x4              (x4          	),
